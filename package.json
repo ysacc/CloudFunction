@@ -1,0 +1,9 @@
+{
+    "scripts": {
+    "start": "index.js"
+    },
+    "dependencies": {
+        "@google-cloud/functions-framework": "^3.0.0",
+        "follow-redirects": "^1.15.3"
+    }
+}
