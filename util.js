@@ -70,6 +70,10 @@ const getTableName = (filepath) => {
         return `WmsReceptionsLoad`;
     } else if (filename.startsWith('WmsShipmentsLoad')) {
         return `WmsShipmentsLoad`;
+    } else if (filename.startsWith('WMS_LOAD')) {
+        return `WMS_LOAD`;
+    } else if (filename.startsWith('WMS_SHIPMENT')) {
+        return `WMS_SHIPMENT`;
     } else {
         return `Error_InvalidFileName`;
     }
