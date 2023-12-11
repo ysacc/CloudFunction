@@ -1,5 +1,5 @@
 const functions = require('@google-cloud/functions-framework')
-const { getAccessToken, loadFile } = require('./util.js')
+const { getAccessToken, loadFile,updateData } = require('./util.js')
 
 functions.cloudEvent('main', async cloudEvent => {
 
@@ -9,7 +9,8 @@ functions.cloudEvent('main', async cloudEvent => {
     const { access_token } = await getAccessToken()
    // console.log(`My access_token: ${access_token}`)
     //Load file in db
-    const resultLoad = await loadFile(access_token, file.name)
+    const resultLoad = await loadFile(access_token, file.name);
+    await updateData(file.name);
     console.log(resultLoad)
     console.log('End')
 })
