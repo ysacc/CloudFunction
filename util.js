@@ -75,9 +75,13 @@ const getTableName = (filepath) => {
         return `WMS_LOAD`;
     } else if (filename.startsWith('WMS_SHIPMENT')) {
         return `WMS_SHIPMENT`;
+    } else if (filename.startsWith('IleanPMMShipments')) {
+        return `IleanPMMShipments`;
+    } else if (filename.startsWith('SovosReferralGuidelines')) {
+        return `SovosReferralGuidelines`;
     } else {
         return `Error_InvalidFileName`;
-    }
+    }IleanPMMShipments
 };
 
 const loadFile = async (access_token, filepath) => {
